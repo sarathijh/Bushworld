@@ -1,0 +1,62 @@
+<!doctype>
+<html lang="en">
+<head>
+    <title>TerminalMontage</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"  />
+
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="../css/soundboard.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: #7c3e1d;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="audio-clips"></ul>
+
+<script src="../js/soundboard.js"></script>
+<script>
+    const audioMap = {
+        "coppa": [...Array(5).keys()].map((i) => "audio/coppa-" + (i + 1).toString().padStart(2, "0") + ".ogg"),
+        "metroid": [...Array(3).keys()].map((i) => "audio/metroid-" + (i + 1).toString().padStart(2, "0") + ".ogg"),
+        "smw": [...Array(1).keys()].map((i) => "audio/smw-" + (i + 1).toString().padStart(2, "0") + ".ogg"),
+    }
+    const audioFiles = audioMap["coppa"].concat(audioMap["metroid"], audioMap["smw"]);
+
+    const labels = [
+        "Poyo!",
+        "Screeeee",
+        "Health insurance",
+        "My premium has gone up",
+        "Adult steaks",
+
+        "The baby",
+        "Wa wa wa",
+        "Uh, I don't know about this boss",
+
+        "Ma Maaaaaaaaaaaaa",
+    ];
+
+    const thumbnails = [
+        null,
+        null,
+        null,
+        null,
+        null,
+
+        null,
+        null,
+        null,
+
+        null,
+    ];
+
+    SoundBoard(audioFiles, labels, thumbnails);
+</script>
+</body>
+</html>
