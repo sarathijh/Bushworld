@@ -19,7 +19,7 @@
 
 <ul id="audio-clips"></ul>
 
-<script src="../js/soundboard.js"></script>
+<script src="../js/SoundBoard.js"></script>
 <script>
     const audioFiles = [...Array(31).keys()].map((i) => "audio/bushworld-" + (i + 1).toString().padStart(2, "0") + ".ogg");
 
@@ -91,7 +91,7 @@
         "img/oh-yeah.png",
     ];
 
-    SoundBoard(audioFiles, labels, thumbnails);
+    SoundBoard("#audio-clips", audioFiles, labels, thumbnails);
 </script>
 </body>
 </html>

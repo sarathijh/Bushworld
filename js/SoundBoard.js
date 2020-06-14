@@ -1,8 +1,8 @@
-function SoundBoard(audioFiles, labels, thumbnails) {
+function SoundBoard(containerSelector, audioFiles, labels, thumbnails) {
     let playingElement = null;
     let frameUpdate = null;
 
-    const audioClipsList = document.getElementById("audio-clips");
+    const audioClipsList = document.querySelector(containerSelector);
     audioClipsList.classList.add("audio-clips");
 
     const audioPlayer = document.createElement("audio");

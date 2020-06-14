@@ -19,11 +19,11 @@
 
 <ul id="audio-clips"></ul>
 
-<script src="../js/soundboard.js"></script>
+<script src="../js/SoundBoard.js"></script>
 <script>
     const audioMap = {
         "coppa": [...Array(5).keys()].map((i) => "audio/coppa-" + (i + 1).toString().padStart(2, "0") + ".ogg"),
-        "metroid": [...Array(3).keys()].map((i) => "audio/metroid-" + (i + 1).toString().padStart(2, "0") + ".ogg"),
+        "metroid": [...Array(5).keys()].map((i) => "audio/metroid-" + (i + 1).toString().padStart(2, "0") + ".ogg"),
         "smw": [...Array(1).keys()].map((i) => "audio/smw-" + (i + 1).toString().padStart(2, "0") + ".ogg"),
     }
     const audioFiles = audioMap["coppa"].concat(audioMap["metroid"], audioMap["smw"]);
@@ -35,9 +35,11 @@
         "My premium has gone up",
         "Adult steaks",
 
-        "The baby",
         "Wa wa wa",
         "Uh, I don't know about this boss",
+        "Magic pancakes?",
+        "Mama",
+        "The baby",
 
         "Ma Maaaaaaaaaaaaa",
     ];
@@ -49,14 +51,16 @@
         null,
         null,
 
-        null,
-        null,
-        null,
+        "img/wawawa.png",
+        "img/dunnoboss.png",
+        "img/pancakes.png",
+        "img/mama.png",
+        "img/thebaby.png",
 
         null,
     ];
 
-    SoundBoard(audioFiles, labels, thumbnails);
+    SoundBoard("#audio-clips", audioFiles, labels, thumbnails);
 </script>
 </body>
 </html>
